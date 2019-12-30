@@ -1,0 +1,26 @@
+{
+  "name": "personal-portfolio",
+  "version": "1.0.0",
+  "description": "Personal Portfolio Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build ./src/index.html --public-url ./ --no-source-maps -d ./",
+    "publish_to_gh_pages": "echo gh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maybebored/personal-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maybebored/personal-portfolio/issues"
+  },
+  "homepage": "https://github.com/maybebored/personal-portfolio#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
