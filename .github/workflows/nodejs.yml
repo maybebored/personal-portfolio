@@ -27,7 +27,15 @@ jobs:
     - name: Publish build to github-pages branch
       run: |
         sudo su
+        mkdir BUILD
+        cp -R docs BUILD/
+        echo "Verify copy"
+        cd BUILD
         ls
+        echo "Verify done" 
         cd .. && ls
+        echo "verify upper"
+        cd .. && ls
+        echo "verify upper^2"
       env:
         CI: true
