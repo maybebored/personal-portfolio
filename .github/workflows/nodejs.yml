@@ -27,10 +27,11 @@ jobs:
     - name: Publish build to github-pages branch
       run: |
         sudo su
-        mkdir BUILD
-        cp -R docs BUILD/
+        cd .. && mkdir BUILD
+        cd personal-portfolio
+        cp docs/* ../BUILD/ 
         echo "Verify copy"
-        cd BUILD
+        cd ../BUILD
         ls
         echo "Verify done" 
         cd .. && ls
