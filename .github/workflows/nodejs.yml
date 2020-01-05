@@ -27,16 +27,13 @@ jobs:
     - name: Publish build to github-pages branch
       run: |
         sudo su
-        cd .. && mkdir BUILD
+        cd .. && mkdir BUILD and pwd
         cd personal-portfolio
         cp docs/* ../BUILD/ 
-        echo "Verify copy"
+        echo "Verify copy" && pwd
         cd ../BUILD
+        git init
         ls
-        echo "Verify done" 
-        cd .. && ls
-        echo "verify upper"
-        cd .. && ls
-        echo "verify upper^2"
+        echo "Verify done" && pwd
       env:
         CI: true
