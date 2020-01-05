@@ -40,7 +40,7 @@ jobs:
         sudo su
         cd docs
         git init
-        git remote add upstream https://maybebored:${{secrets.GITHUB_ACTION_TOKEN}}@github.com/maybebored/personal-portfolio.git
+        git remote add upstream https://github.com/maybebored/personal-portfolio.git
         git fetch -t upstream/gh-pages
         git checkout gh-pages
         git status
