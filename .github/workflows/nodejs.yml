@@ -43,6 +43,6 @@ jobs:
         git remote add upstream https://github.com/maybebored/personal-portfolio.git
         git checkout -b gh-pages
         git add .
-        git push upstream -f
+        git push -u upstream gh-pages
       env:
         CI: true
