@@ -40,9 +40,12 @@ jobs:
         sudo su
         cd docs
         git init
-        git remote add upstream https://github.com/maybebored/personal-portfolio.git
-        git checkout -b gh-pages
+        git remote add upstream https://maybebored:${{secrets.GITHUB_ACTION_TOKEN}}@github.com/maybebored/personal-portfolio.git
+		git fetch -t upstream/gh-pages
+        git checkout gh-pages
+        git status
         git add .
+        git commit -m 'Pushing to GitHub Pages"
         git status
         git push -u upstream gh-pages
       env:
