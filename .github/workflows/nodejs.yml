@@ -24,16 +24,25 @@ jobs:
       run: |
         npm ci
         npm run build
-    - name: Publish build to github-pages branch
+#   - name: Copy build files
+#       run: |
+#         sudo su
+#         cd .. && mkdir BUILD and pwd
+#         cd personal-portfolio
+#         cp docs/* ../BUILD/ 
+#         echo "Verify copy" && pwd
+#         cd ../BUILD
+#         git init
+#         ls
+#         echo "Verify done" && pwd
+    - name: Push to github
       run: |
         sudo su
-        cd .. && mkdir BUILD and pwd
-        cd personal-portfolio
-        cp docs/* ../BUILD/ 
-        echo "Verify copy" && pwd
-        cd ../BUILD
+        cd docs
         git init
-        ls
-        echo "Verify done" && pwd
+        git remote add upstream https://github.com/maybebored/personal-portfolio.git
+        git checkout -b gh-pages
+        git add .
+        git push upstream gh-pages
       env:
         CI: true
